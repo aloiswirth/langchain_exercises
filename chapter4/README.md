@@ -1,5 +1,7 @@
 # Chapter 4 - Building Capable Assistants
 
+As of this chapter the links to the book will be made clearer and links to book pages will be inserted. 
+
 
 | Section	| File | Colab	 | Kaggle	| Gradient |
 |-----------|--------|--------|-----------|----------|

@@ -1,8 +1,8 @@
-from langchain.llms.fake import FakeListLLM
+from langchain_community.llms import FakeListLLM
 from langchain.agents import create_react_agent
 from langchain.agents import Tool
 from langchain_core.prompts import PromptTemplate
-from langchain_experimental.utilities import PythonREPL
+from langchain_experimental.utilities.python import PythonREPL
 
 python_repl = PythonREPL()
 
@@ -45,4 +45,4 @@ agent = create_react_agent(
 if __name__ == "__main__":
     # print(python_repl.run("print(1+1)"))
     # prompt.format(foo="bar")
-    llm.invoke("what's 2 + 2")
+    print(llm.invoke("what's 2 + 2"))
