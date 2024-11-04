@@ -39,7 +39,7 @@ tool_names = st.multiselect(
         "python_repl",
         "wikipedia",
         "arxiv",
-        "google-search",
+        # "google-search",
         "wolfram-alpha",
         "ddg-search",
     ],
@@ -62,3 +62,10 @@ if prompt := st.chat_input(placeholder="Ask me anything!"):
         st_callback = StreamlitCallbackHandler(st.container())
         response = agent_chain.invoke({"input": prompt}, {"callbacks": [st_callback]})
         st.write(response["output"])
+
+
+temperature = st.slider("Temperature", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
+
+conversation = st.json(MEMORY.chat_memory.to_dict())
+
+st.write(conversation)

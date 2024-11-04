@@ -49,7 +49,7 @@ def load_tools(
         #  "wolfram_alpha_appid"
         "wolfram-alpha": WolframAlphaQueryRun(api_wrapper=WolframAlphaAPIWrapper()),
         #  ["google_api_key", "google_cse_id"]
-        "google-search": GoogleSearchRun(api_wrapper=GoogleSearchAPIWrapper()),
+        # "google-search": GoogleSearchRun(api_wrapper=GoogleSearchAPIWrapper()),
         # "top_k_results", "load_max_docs", "load_all_available_meta"
         "arxiv": ArxivQueryRun(api_wrapper=ArxivAPIWrapper()),
         "wikipedia": WikipediaQueryRun(api_wrapper=wikipedia_api_wrapper),
