@@ -11,3 +11,6 @@ As of this chapter the links to the book will be made clearer and links to book 
 | Tool use examples | [notebook](tool_use.ipynb)     |        | | |
 | Advanced example for tool use | [python script](tools.py)     |   x     |  x |  x |
 
+"Building a cabale Assistant" starts with tool_use.ipynb. The first things done is using Wikipedia to create content. 
+
+The next step si "Implementing a research assistant with tools".  
