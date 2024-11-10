@@ -16,7 +16,7 @@ import streamlit as st
 from langchain_community.callbacks.streamlit import (
     StreamlitCallbackHandler,
 )
-
+from langchain_core.chat_history import InMemoryChatMessageHistory
 from chapter4.question_answering.agent import load_agent
 from chapter4.question_answering.utils import MEMORY
 
@@ -66,6 +66,12 @@ if prompt := st.chat_input(placeholder="Ask me anything!"):
 
 temperature = st.slider("Temperature", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
 
-conversation = st.json(MEMORY.chat_memory.to_dict())
+# conversation = st.json(MEMORY.chat_memory.to_dict())
+
+# Manually convert chat history to dictionary format
+def chat_history_to_dict(chat_history):
+    return [{"type": msg.type, "content": msg.content} for msg in chat_history.messages]
+
+conversation = chat_history_to_dict(MEMORY.chat_memory)
 
 st.write(conversation)
